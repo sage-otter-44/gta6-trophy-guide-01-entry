@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; offline guide</p>
+      <h1>Leonida Ledger</h1>
+      <p class="subtitle">Every one of the 55 trophies — official name, description and grade — with a guide that cites its sources, a roadmap to the platinum, and a checklist that saves in your browser.</p>
+    </div>
+    <div class="platinum-card" id="platinumCard">
+      <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+      <p class="platinum-label">trophies earned</p>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="grade-counts" id="gradeCounts">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze</p>
+      <p class="platinum-note" id="platinumNote">28 hidden on PlayStation &middot; 0 online &middot; ~200 hours to platinum</p>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="Tracker controls">
+  <div class="toolbar-row">
+    <label class="search-box">Search <input id="search" type="search" placeholder="Trophy name or mission…" autocomplete="off"></label>
+    <label class="select-box">Kind
+      <select id="kindFilter">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="robberies">Robberies</option>
+        <option value="exploration">Exploration</option>
+        <option value="money">Money</option>
+        <option value="combat">Combat</option>
+        <option value="cryptic">Cryptic / unconfirmed</option>
+      </select>
+    </label>
+    <label class="select-box">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <label class="check"><input id="spoilerSafe" type="checkbox"> Spoiler-safe: hide story trophies until earned</label>
+  </div>
+  <div class="toolbar-row">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button">Reset progress</button>
+    <span class="toolbar-status" id="filterStatus">Showing 55 of 55 trophies</span>
+  </div>
+</nav>
+
+<main>
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-note">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Cheats off, manual save at the start of every chapter — there is no mission replay.</p>
+    <ol class="roadmap-steps" id="roadmapSteps"></ol>
+  </section>
+
+  <section class="missable-callout" aria-label="Missable trophies">
+    <h2>Missable trophies</h2>
+    <p><strong>1 trophy can be missed: Positive Mental Attitude.</strong> Lucia&rsquo;s balcony meditation at Jason&rsquo;s house in Chapter 1 counts toward it and is reported to disappear once that chapter ends. Do it in Chapter 1. Stranger mission chains are also reported to have windows tied to story progress, so start them as soon as they unlock. Everything else can be earned after the story.</p>
+    <p class="callout-source">Sources: OutputLag; GTABase and PowerPyx via EGamers.io; TechWiser via EGamers.io.</p>
+  </section>
+
+  <div class="layout">
+    <section class="checklist" aria-label="Trophy checklist">
+      <h2>Trophy checklist</h2>
+      <ul class="trophy-list" id="trophyList"></ul>
+      <p class="empty-note" id="emptyNote" hidden>No trophies match these filters.</p>
+    </section>
+    <aside class="detail" id="detailPane" aria-label="Trophy guide">
+      <h2>Guide</h2>
+      <div id="detailBody"><p class="detail-empty">Select a trophy to read its guide and sources.</p></div>
+    </aside>
+  </div>
+
+  <section class="about" aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Names, descriptions, grades and PSN progress targets are the official list as PSNProfiles and Exophase publish it (checked 2026-11-19). Every guide is written in this entry&rsquo;s own words and names its sources beside it; where no unlock method was confirmed at launch, the guide says so instead of guessing. All 55 trophies are single-player and offline — there are no online trophies. This guide works with the network off and stores your progress only in this browser (localStorage); nothing is uploaded anywhere.</p>
+    <p class="about-sources" id="aboutSources"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger — an unofficial fan guide. Not affiliated with Rockstar Games or Sony. No Rockstar artwork or logos are used. Trophy names and descriptions are shown as PlayStation publishes them.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
